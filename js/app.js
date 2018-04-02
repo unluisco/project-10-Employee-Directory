@@ -13,7 +13,7 @@ xhr.onload = function () {
 
 	if (xhr.readyState === DONE) {
 		if (xhr.status === OK) {
-			var randomEmployee = JSON.parse(xhr.responseText);
+			let randomEmployee = JSON.parse(xhr.responseText);
 			console.log(randomEmployee.results);
 		} else {
 			console.log('Error: ' + xhr.status);

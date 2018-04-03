@@ -50,9 +50,12 @@ h1 {
 	margin: 0;
 	font-size: 1.25rem;
 	color: #414a51;
+	text-transform: capitalize;
 }
 
-.employee-email,
+.employee-city { text-transform: capitalize; }
+
+.employee-username,
 .employee-city,
 .employee-phone,
 .employee-address,
@@ -86,13 +89,13 @@ h1 {
 }
 
 .directory .employee-photo {
-	width: 35%;
-	height: 35%;
+	width: 120px;
+	height: 120px;
 }
 
 .directory .employee-info { margin-left: 7.5%; }
 
-.directory .employee-email,
+.directory .employee-username,
 .directory .employee-city { padding-top: 5%; }
 
 /* Overlay
@@ -136,7 +139,7 @@ h1 {
 	border-top: 1px solid #dadada;
 }
 
-.overlay .employee-email,
+.overlay .employee-username,
 .overlay .employee-city,
 .overlay .employee-address,
 .overlay .employee-birthday { padding-top: 5%; }

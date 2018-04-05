@@ -50,10 +50,11 @@ h1 {
 	margin: 0;
 	font-size: 1.25rem;
 	color: #414a51;
-	text-transform: capitalize;
 }
 
-.employee-city { text-transform: capitalize; }
+.employee-name,
+.employee-city,
+.employee-address { text-transform: capitalize; }
 
 .employee-username,
 .employee-city,

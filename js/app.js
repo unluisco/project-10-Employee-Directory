@@ -29,7 +29,7 @@ xhr.onload = function () {
 				EmployeeData[i].city = randomEmployee[i].location.city; // City
 				EmployeeData[i].phone = randomEmployee[i].cell; // Phone
 				EmployeeData[i].address = `${randomEmployee[i].location.street}, ${randomEmployee[i].location.city} ${randomEmployee[i].location.postcode}`; // Address
-				EmployeeData[i].birthday = `Birthday: ${randomEmployee[i].dob.substring(0, 10)}`; // Birthday
+				EmployeeData[i].birthday = `Birthday: ${randomEmployee[i].dob.date.substring(0, 10)}`; // Birthday
 			}
 
 		} else { console.log('Error: ' + xhr.status) }

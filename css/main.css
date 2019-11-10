@@ -1,9 +1,4 @@
-/* Debug
-	 ========================================================================== */
-
-/* * { outline: 1px solid red; } */
-
-/* Base
+/* Base.
 	 ========================================================================== */
 
 html,
@@ -26,7 +21,7 @@ h1 {
 	text-transform: uppercase;
 }
 
-/* Employee box
+/* Caja de empleado.
 	 ========================================================================== */
 
 .employee-box {
@@ -65,7 +60,7 @@ h1 {
 	color: #91979a;
 }
 
-/* Directory
+/* Directorio.
 	 ========================================================================== */
 
 .directory {
@@ -76,13 +71,27 @@ h1 {
 
 .directory .employee-box {
 	display: inline-flex;
-	width: 32%;
+	width: 100%;
 	margin-top: 2%;
 	padding: 2%;
 	cursor: pointer;
 }
 
-.directory .employee-box:not(:nth-of-type(3n)) { margin-right: 2%; }
+@media (min-width: 34.375rem) { /* 550px / 16px. */
+
+	.directory .employee-box { width: 47.5%; }
+
+	.directory .employee-box:nth-of-type(odd) { margin-right: 5%; }
+}
+
+@media (min-width: 62.5rem) { /* 1000px / 16px. */
+
+	.directory .employee-box { width: 32%; }
+
+	.directory .employee-box:nth-of-type(odd) { margin-right: 0; }
+
+	.directory .employee-box:not(:nth-of-type(3n)) { margin-right: 2%; }
+}
 
 .directory .employee-box:hover {
 	transform: translateY(-1px);
@@ -99,7 +108,7 @@ h1 {
 .directory .employee-username,
 .directory .employee-city { padding-top: 5%; }
 
-/* Overlay
+/* Caja de empleado superpuesta.
 	 ========================================================================== */
 
 .overlay {
@@ -120,8 +129,18 @@ h1 {
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	width: 30%;
+	width: 80%;
 	padding: 3.5%;
+}
+
+@media (min-width: 34.375rem) { /* 550px / 16px. */
+
+	.overlay .employee-box { width: 40%; }
+}
+
+@media (min-width: 62.5rem) { /* 1000px / 16px. */
+
+	.overlay .employee-box { width: 30%; }
 }
 
 .overlay .employee-photo {
